@@ -8,20 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		3DD79C6E24008C144A99C04E /* Pods_Look_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F260F2956BEBC94C8C8035 /* Pods_Look_.framework */; };
-		61FBC7122432529F2DA91650 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FBCBD92B8C94D9BD29BC74 /* ViewController.swift */; };
+		46591BD720623B92004ABAD5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46591BCD20623B91004ABAD5 /* MainViewController.swift */; };
+		46591BD820623B92004ABAD5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46591BD020623B92004ABAD5 /* BaseViewController.swift */; };
+		46591BD920623B92004ABAD5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46591BD120623B92004ABAD5 /* Extensions.swift */; };
+		46591BDA20623B92004ABAD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46591BD220623B92004ABAD5 /* AppDelegate.swift */; };
+		46591BDB20623B92004ABAD5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46591BD520623B92004ABAD5 /* HomeViewController.swift */; };
+		46591BDC20623B92004ABAD5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46591BD620623B92004ABAD5 /* Info.plist */; };
 		61FBC761A9FC1391C1042318 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61FBC0CBCDCBEB30CFC729CB /* Main.storyboard */; };
 		61FBC7EF99E8BAED028A2298 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61FBCD78B24E712D9706F3FA /* LaunchScreen.storyboard */; };
-		61FBCA29C78045C1131BC4A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FBC4E9C14005A138E48233 /* AppDelegate.swift */; };
 		61FBCB93D46A3DF64E4832B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61FBC3B97AF905D6BA4E3795 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46591BCD20623B91004ABAD5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		46591BD020623B92004ABAD5 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		46591BD120623B92004ABAD5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		46591BD220623B92004ABAD5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		46591BD520623B92004ABAD5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		46591BD620623B92004ABAD5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61FBC1D7407EA424A204EA00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		61FBC3B97AF905D6BA4E3795 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		61FBC4E9C14005A138E48233 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61FBC7CD3FD351D919634F9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		61FBC843FFEB438D05D3340D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
-		61FBCBD92B8C94D9BD29BC74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		61FBCEC82851EC871BCDAB05 /* Look!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Look!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64802F19C6B168BD73892F78 /* Pods-Look!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Look!.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Look!/Pods-Look!.debug.xcconfig"; sourceTree = "<group>"; };
 		E0F260F2956BEBC94C8C8035 /* Pods_Look_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Look_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +47,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46591BCC20623B91004ABAD5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				46591BCD20623B91004ABAD5 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		46591BCE20623B92004ABAD5 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		46591BCF20623B92004ABAD5 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				46591BD620623B92004ABAD5 /* Info.plist */,
+				46591BD020623B92004ABAD5 /* BaseViewController.swift */,
+				46591BD120623B92004ABAD5 /* Extensions.swift */,
+				46591BD220623B92004ABAD5 /* AppDelegate.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		46591BD320623B92004ABAD5 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Discovery;
+			sourceTree = "<group>";
+		};
+		46591BD420623B92004ABAD5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				46591BD520623B92004ABAD5 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		61FBC0E8EC0ACFA0F674AE97 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -51,12 +99,14 @@
 		61FBCBBC04EC3FD21C2B36EE /* Look! */ = {
 			isa = PBXGroup;
 			children = (
-				61FBC843FFEB438D05D3340D /* Info.plist */,
+				46591BD320623B92004ABAD5 /* Discovery */,
+				46591BD420623B92004ABAD5 /* Home */,
+				46591BCC20623B91004ABAD5 /* Main */,
+				46591BCE20623B92004ABAD5 /* Me */,
+				46591BCF20623B92004ABAD5 /* Other */,
 				61FBC3B97AF905D6BA4E3795 /* Assets.xcassets */,
 				61FBCD78B24E712D9706F3FA /* LaunchScreen.storyboard */,
-				61FBC4E9C14005A138E48233 /* AppDelegate.swift */,
 				61FBC0CBCDCBEB30CFC729CB /* Main.storyboard */,
-				61FBCBD92B8C94D9BD29BC74 /* ViewController.swift */,
 			);
 			path = "Look!";
 			sourceTree = "<group>";
@@ -141,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46591BDC20623B92004ABAD5 /* Info.plist in Resources */,
 				61FBCB93D46A3DF64E4832B9 /* Assets.xcassets in Resources */,
 				61FBC7EF99E8BAED028A2298 /* LaunchScreen.storyboard in Resources */,
 				61FBC761A9FC1391C1042318 /* Main.storyboard in Resources */,
@@ -212,8 +263,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61FBCA29C78045C1131BC4A9 /* AppDelegate.swift in Sources */,
-				61FBC7122432529F2DA91650 /* ViewController.swift in Sources */,
+				46591BDB20623B92004ABAD5 /* HomeViewController.swift in Sources */,
+				46591BDA20623B92004ABAD5 /* AppDelegate.swift in Sources */,
+				46591BD720623B92004ABAD5 /* MainViewController.swift in Sources */,
+				46591BD920623B92004ABAD5 /* Extensions.swift in Sources */,
+				46591BD820623B92004ABAD5 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +298,7 @@
 			baseConfigurationReference = F865C95C3043AB796A8567EE /* Pods-Look!.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Look!/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Look!/Other/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cc.larry.Look-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -308,7 +362,7 @@
 			baseConfigurationReference = 64802F19C6B168BD73892F78 /* Pods-Look!.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Look!/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Look!/Other/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cc.larry.Look-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -384,6 +438,7 @@
 				61FBC12806A4F8646A125A8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61FBCFC802EDF1469C6273EE /* Build configuration list for PBXProject "Look!" */ = {
 			isa = XCConfigurationList;
