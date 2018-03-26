@@ -300,3 +300,99 @@ extension Optional where Wrapped: PossiblyEmpty {
         }
     }
 }
+
+// MARK: - UIView扩展
+extension UIView {
+    
+    // MARK: - 属性
+    public var size:CGSize {
+        get{
+            return self.frame.size
+        }
+        set{
+            self.frame.size = newValue
+        }
+    }
+    
+    public var origin:CGPoint {
+        get{
+            return self.frame.origin
+        }
+        set{
+            self.frame.origin = newValue
+        }
+    }
+    
+    public var x:CGFloat{
+        get{
+            return self.frame.origin.x
+        }
+        set{
+            self.frame.origin.x = newValue
+        }
+    }
+    
+    public var y:CGFloat{
+        get{
+            return self.frame.origin.y
+        }
+        set{
+            self.frame.origin.y = newValue
+        }
+    }
+    
+    public var width:CGFloat{
+        get{
+            return self.frame.size.width
+        }
+        set{
+            self.frame.size.width = newValue
+        }
+    }
+    
+    public var height:CGFloat {
+        get{
+            return self.frame.size.height
+        }
+        set{
+            self.frame.size.height = newValue
+        }
+    }
+    
+    //注意：centerX、centerY应该在宽度、高度设置后再设置，否则刷新前错位
+    public var centerX:CGFloat {
+        get{
+            return self.center.x
+        }
+        set{
+            self.center.x = newValue
+        }
+    }
+    
+    public var centerY:CGFloat {
+        get{
+            return self.center.y
+        }
+        set{
+            self.center.y = newValue
+        }
+    }
+    
+    public var maxX:CGFloat {
+        get{
+            return self.frame.maxX
+        }
+        set{
+            self.x = newValue - self.width
+        }
+    }
+    
+    public var maxY:CGFloat {
+        get{
+            return self.frame.maxY
+        }
+        set{
+            self.y = newValue - self.height
+        }
+    }
+}

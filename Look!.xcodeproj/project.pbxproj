@@ -8,24 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		3DD79C6E24008C144A99C04E /* Pods_Look_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F260F2956BEBC94C8C8035 /* Pods_Look_.framework */; };
+		464550A22068DEC1002E5DC1 /* BaseNavigationHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464550A12068DEC1002E5DC1 /* BaseNavigationHeader.swift */; };
+		464550A42068E189002E5DC1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464550A32068E189002E5DC1 /* Constants.swift */; };
+		464550A62068E31A002E5DC1 /* DiscoveryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464550A52068E31A002E5DC1 /* DiscoveryTableViewController.swift */; };
+		464550A82068E32A002E5DC1 /* MeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464550A72068E32A002E5DC1 /* MeTableViewController.swift */; };
+		464550AB2068E344002E5DC1 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464550AA2068E344002E5DC1 /* MessageTableViewController.swift */; };
 		46591BD720623B92004ABAD5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46591BCD20623B91004ABAD5 /* MainViewController.swift */; };
-		46591BD820623B92004ABAD5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46591BD020623B92004ABAD5 /* BaseViewController.swift */; };
 		46591BD920623B92004ABAD5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46591BD120623B92004ABAD5 /* Extensions.swift */; };
 		46591BDA20623B92004ABAD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46591BD220623B92004ABAD5 /* AppDelegate.swift */; };
-		46591BDB20623B92004ABAD5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46591BD520623B92004ABAD5 /* HomeViewController.swift */; };
-		46591BDC20623B92004ABAD5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46591BD620623B92004ABAD5 /* Info.plist */; };
+		46591BDB20623B92004ABAD5 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46591BD520623B92004ABAD5 /* HomeTableViewController.swift */; };
+		4660B3A02068821C00F43911 /* BaseBouncedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4660B39F2068821C00F43911 /* BaseBouncedTableViewController.swift */; };
 		61FBC761A9FC1391C1042318 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61FBC0CBCDCBEB30CFC729CB /* Main.storyboard */; };
 		61FBC7EF99E8BAED028A2298 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61FBCD78B24E712D9706F3FA /* LaunchScreen.storyboard */; };
 		61FBCB93D46A3DF64E4832B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61FBC3B97AF905D6BA4E3795 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		464550A12068DEC1002E5DC1 /* BaseNavigationHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationHeader.swift; sourceTree = "<group>"; };
+		464550A32068E189002E5DC1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		464550A52068E31A002E5DC1 /* DiscoveryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryTableViewController.swift; sourceTree = "<group>"; };
+		464550A72068E32A002E5DC1 /* MeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeTableViewController.swift; sourceTree = "<group>"; };
+		464550AA2068E344002E5DC1 /* MessageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		46591BCD20623B91004ABAD5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		46591BD020623B92004ABAD5 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		46591BD120623B92004ABAD5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		46591BD220623B92004ABAD5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		46591BD520623B92004ABAD5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		46591BD520623B92004ABAD5 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		46591BD620623B92004ABAD5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4660B39F2068821C00F43911 /* BaseBouncedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBouncedTableViewController.swift; sourceTree = "<group>"; };
 		61FBC1D7407EA424A204EA00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		61FBC3B97AF905D6BA4E3795 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61FBC7CD3FD351D919634F9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,10 +56,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		464550A92068E33B002E5DC1 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				464550AA2068E344002E5DC1 /* MessageTableViewController.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
 		46591BCC20623B91004ABAD5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				46591BCD20623B91004ABAD5 /* MainViewController.swift */,
+				464550A12068DEC1002E5DC1 /* BaseNavigationHeader.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -58,6 +76,7 @@
 		46591BCE20623B92004ABAD5 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				464550A72068E32A002E5DC1 /* MeTableViewController.swift */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -66,8 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				46591BD620623B92004ABAD5 /* Info.plist */,
-				46591BD020623B92004ABAD5 /* BaseViewController.swift */,
 				46591BD120623B92004ABAD5 /* Extensions.swift */,
+				464550A32068E189002E5DC1 /* Constants.swift */,
 				46591BD220623B92004ABAD5 /* AppDelegate.swift */,
 			);
 			path = Other;
@@ -76,6 +95,7 @@
 		46591BD320623B92004ABAD5 /* Discovery */ = {
 			isa = PBXGroup;
 			children = (
+				464550A52068E31A002E5DC1 /* DiscoveryTableViewController.swift */,
 			);
 			path = Discovery;
 			sourceTree = "<group>";
@@ -83,9 +103,17 @@
 		46591BD420623B92004ABAD5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				46591BD520623B92004ABAD5 /* HomeViewController.swift */,
+				46591BD520623B92004ABAD5 /* HomeTableViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		4660B39E206881ED00F43911 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				4660B39F2068821C00F43911 /* BaseBouncedTableViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		61FBC0E8EC0ACFA0F674AE97 /* Products */ = {
@@ -99,6 +127,8 @@
 		61FBCBBC04EC3FD21C2B36EE /* Look! */ = {
 			isa = PBXGroup;
 			children = (
+				464550A92068E33B002E5DC1 /* Message */,
+				4660B39E206881ED00F43911 /* Base */,
 				46591BD320623B92004ABAD5 /* Discovery */,
 				46591BD420623B92004ABAD5 /* Home */,
 				46591BCC20623B91004ABAD5 /* Main */,
@@ -168,6 +198,11 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = Larry;
+				TargetAttributes = {
+					61FBCF5D48E272C509DF2628 = {
+						DevelopmentTeam = RY3E3AFV2D;
+					};
+				};
 			};
 			buildConfigurationList = 61FBCFC802EDF1469C6273EE /* Build configuration list for PBXProject "Look!" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -191,7 +226,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46591BDC20623B92004ABAD5 /* Info.plist in Resources */,
 				61FBCB93D46A3DF64E4832B9 /* Assets.xcassets in Resources */,
 				61FBC7EF99E8BAED028A2298 /* LaunchScreen.storyboard in Resources */,
 				61FBC761A9FC1391C1042318 /* Main.storyboard in Resources */,
@@ -263,11 +297,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46591BDB20623B92004ABAD5 /* HomeViewController.swift in Sources */,
+				46591BDB20623B92004ABAD5 /* HomeTableViewController.swift in Sources */,
+				464550A22068DEC1002E5DC1 /* BaseNavigationHeader.swift in Sources */,
+				464550AB2068E344002E5DC1 /* MessageTableViewController.swift in Sources */,
 				46591BDA20623B92004ABAD5 /* AppDelegate.swift in Sources */,
 				46591BD720623B92004ABAD5 /* MainViewController.swift in Sources */,
+				464550A62068E31A002E5DC1 /* DiscoveryTableViewController.swift in Sources */,
+				464550A82068E32A002E5DC1 /* MeTableViewController.swift in Sources */,
+				464550A42068E189002E5DC1 /* Constants.swift in Sources */,
+				4660B3A02068821C00F43911 /* BaseBouncedTableViewController.swift in Sources */,
 				46591BD920623B92004ABAD5 /* Extensions.swift in Sources */,
-				46591BD820623B92004ABAD5 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +337,9 @@
 			baseConfigurationReference = F865C95C3043AB796A8567EE /* Pods-Look!.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RY3E3AFV2D;
 				INFOPLIST_FILE = "$(SRCROOT)/Look!/Other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cc.larry.Look-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -362,7 +403,9 @@
 			baseConfigurationReference = 64802F19C6B168BD73892F78 /* Pods-Look!.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RY3E3AFV2D;
 				INFOPLIST_FILE = "$(SRCROOT)/Look!/Other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cc.larry.Look-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
