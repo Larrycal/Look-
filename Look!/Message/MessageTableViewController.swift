@@ -12,20 +12,20 @@ class MessageTableViewController: BaseBouncedTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tableView.backgroundColor = .gray
+        self.tableView.layer.cornerRadius = 20
+        self.tableView.separatorStyle = .none
     }
-
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
+    
+    // MARK: - UITableViewDataSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 5
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
+        cell.textLabel?.text = "\(indexPath.row)"
+        return cell
     }
 
 

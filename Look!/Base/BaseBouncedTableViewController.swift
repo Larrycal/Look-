@@ -10,10 +10,12 @@ import UIKit
 import AudioToolbox
 
 private let bouncedMinimumValue:CGFloat = 150
+let baseBouncedTableViewMaxY:CGFloat = 190
+let baseBouncedTableViewMinY:CGFloat = 96
 class BaseBouncedTableViewController: UITableViewController {
 
-    var bouncedDownHandler:((_ scrollView:UIScrollView, _ bouncedView:UIView)->Void)?
-    var bouncedUpHandler:((_ scrollView:UIScrollView, _ bouncedView:UIView)->Void)?
+    var bouncedDownHandler:((_ bouncedView:UIView)->Void)?
+    var bouncedUpHandler:((_ bouncedView:UIView)->Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,29 +27,23 @@ class BaseBouncedTableViewController: UITableViewController {
         if scrollView.contentOffset.y < 0 && self.view.y < bouncedMinimumValue{
             self.view.y = (self.view.y - scrollView.contentOffset.y) >= bouncedMinimumValue ? bouncedMinimumValue:(self.view.y - scrollView.contentOffset.y)
             if self.view.y == bouncedMinimumValue {
-                if !self.peeked {
-                    self.peeked = true
-                    AudioServicesPlaySystemSound(1519)
-                }
+                AudioServicesPlaySystemSound(1519)
                 UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 2, options: .curveEaseInOut, animations: {
-                    self.view.y = 190
+                    self.view.y = baseBouncedTableViewMaxY
                 }) { (finish) in
-                    self.bouncedDownHandler?(scrollView,self.view)
+                    self.bouncedDownHandler?(self.view)
                 }
             }
         }
         // 向上推
         if scrollView.contentOffset.y > 0 && self.view.y > bouncedMinimumValue{
             self.view.y = (self.view.y - scrollView.contentOffset.y) <= bouncedMinimumValue ? bouncedMinimumValue:(self.view.y - scrollView.contentOffset.y)
-            if self.peeked {
-                self.peeked = false
-                AudioServicesPlaySystemSound(1519)
-            }
             if self.view.y == bouncedMinimumValue {
+                AudioServicesPlaySystemSound(1519)
                 UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 2, options: .curveEaseInOut, animations: {
-                    self.view.y = 96
+                    self.view.y = baseBouncedTableViewMinY
                 }) { (finish) in
-                    self.bouncedUpHandler?(scrollView,self.view)
+                    self.bouncedUpHandler?(self.view)
                 }
             }
         }
@@ -57,19 +53,17 @@ class BaseBouncedTableViewController: UITableViewController {
         // 当不满足界面上升条件时、弹回原处
         if self.view.y >= bouncedMinimumValue {
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 2, options: .curveEaseOut, animations: {
-                self.view.y = 190
+                self.view.y = baseBouncedTableViewMaxY
             }) { (finish) in
-                self.bouncedDownHandler?(scrollView,self.view)
+                self.bouncedDownHandler?(self.view)
             }
         } else {
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 2, options: .curveEaseOut, animations: {
-                self.view.y = 96
+                self.view.y = baseBouncedTableViewMinY
             }) { (finish) in
-                self.bouncedUpHandler?(scrollView,self.view)
+                self.bouncedUpHandler?(self.view)
             }
         }
     }
-    
-    private lazy var peeked:Bool = false
 
 }
