@@ -23,7 +23,6 @@ class MainViewController:UIViewController {
     private func setup(){
         self.view.backgroundColor = UIColor(hexValue:0xe62565)
         self.view.frame = UIScreen.main.bounds
-        
         self.view.addSubview(self.titleLabel)
         self.view.addSubview(self.titleArrow)
         self.view.addSubview(self.navigationHeader)
@@ -52,29 +51,28 @@ class MainViewController:UIViewController {
             make.height.equalTo(80)
         }
         
-        self.homeTableView.view.snp.makeConstraints { (make) in
-            make.top.equalTo(self.titleArrow.snp.bottom).offset(3)
-            make.left.right.equalTo(0)
-            make.bottom.equalTo(10)
-        }
-
-        self.discoveryTableView.view.snp.makeConstraints { (make) in
-            make.top.equalTo(self.homeTableView.view)
-            make.left.right.equalTo(0)
-            make.bottom.equalTo(10)
-        }
-
-        self.messageTableView.view.snp.makeConstraints { (make) in
-            make.top.equalTo(self.homeTableView.view)
-            make.left.right.equalTo(0)
-            make.bottom.equalTo(10)
-        }
-
-        self.meTableView.view.snp.makeConstraints { (make) in
-            make.top.equalTo(self.homeTableView.view)
-            make.left.right.equalTo(0)
-            make.bottom.equalTo(10)
-        }
+//        self.homeTableView.view.snp.makeConstraints { (make) in
+//            make.left.right.equalTo(0)
+//            make.bottom.equalTo(10)
+//        }
+//
+//        self.discoveryTableView.view.snp.makeConstraints { (make) in
+//            make.top.equalTo(self.homeTableView.view)
+//            make.left.right.equalTo(0)
+//            make.bottom.equalTo(10)
+//        }
+//
+//        self.messageTableView.view.snp.makeConstraints { (make) in
+//            make.top.equalTo(self.homeTableView.view)
+//            make.left.right.equalTo(0)
+//            make.bottom.equalTo(10)
+//        }
+//
+//        self.meTableView.view.snp.makeConstraints { (make) in
+//            make.top.equalTo(self.homeTableView.view)
+//            make.left.right.equalTo(0)
+//            make.bottom.equalTo(10)
+//        }
     }
     // MARK: - 事件响应
     
@@ -128,6 +126,7 @@ class MainViewController:UIViewController {
     
     private lazy var homeTableView:HomeTableViewController = {
         let temp = HomeTableViewController()
+        temp.view.frame = CGRect(x: 0, y: baseBouncedTableViewMinY, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - baseBouncedTableViewMinY)
         temp.bouncedDownHandler = { [weak self]_ in
             guard let weakSelf = self else {return}
             weakSelf.titleArrow.transform = CGAffineTransform(rotationAngle: 0)
