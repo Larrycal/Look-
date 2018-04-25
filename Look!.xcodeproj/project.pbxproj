@@ -83,13 +83,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		4660B39E206881ED00F43911 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
 		46826DCE209031440071E9AD /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				61FBC3B97AF905D6BA4E3795 /* Assets.xcassets */,
-				4660B39E206881ED00F43911 /* Base */,
 				46591BD420623B92004ABAD5 /* Home */,
 				46591BCF20623B92004ABAD5 /* Other */,
 				61FBC7FC110E5D3590E1871D /* Common */,
