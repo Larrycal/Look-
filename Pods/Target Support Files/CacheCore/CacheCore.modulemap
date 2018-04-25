@@ -1,0 +1,6 @@
+framework module CacheCore {
+  umbrella header "CacheCore-umbrella.h"
+
+  export *
+  module * { export * }
+}

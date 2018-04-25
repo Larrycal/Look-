@@ -8,9 +8,26 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 class HomeTableViewCell: UITableViewCell {
 
+    var feedItem: FeedModel? {
+        didSet {
+            guard let item = feedItem else {
+                print("feedmodel 模型数据出错")
+                return
+            }
+            guard let url = URL(string: item.urls.thumb) else {
+                print("图片URL出错")
+                return
+            }
+            self.imageCover.kf.setImage(with: url)
+            self.describeLabel.text = item.description
+            self.titleLabel.text = item.id
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -27,87 +44,77 @@ class HomeTableViewCell: UITableViewCell {
 
     // MARK: - 私有方法
     private func setup() {
-        self.contentView.addSubview(self.nameLabel)
-        self.contentView.addSubview(self.imageScrollView)
-        self.contentView.addSubview(self.pageControl)
-        self.contentView.addSubview(self.likeButton)
-        self.contentView.addSubview(self.titleLabel)
-        self.contentView.addSubview(self.dotLabel)
-        self.contentView.addSubview(self.describeLabel)
-        self.nameLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(8)
-            make.left.equalTo(8)
+        self.contentView.addSubview(self.shadowView)
+        self.shadowView.addSubview(self.containerView)
+        
+        self.shadowView.snp.makeConstraints { make in
+            make.left.equalTo(15)
+            make.right.equalTo(-15)
+            make.top.bottom.equalTo(8)
         }
-        self.imageScrollView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.nameLabel.snp.bottom).offset(5)
+        
+        self.containerView.snp.makeConstraints { make in
+            make.edges.equalTo(0)
+        }
+
+        self.containerView.addSubview(self.imageCover)
+        self.containerView.addSubview(self.titleLabel)
+        self.containerView.addSubview(self.describeLabel)
+
+        self.imageCover.snp.makeConstraints { (make) in
+            make.top.equalTo(0)
             make.left.right.equalTo(0)
             make.height.equalTo(280)
         }
-        self.pageControl.snp.makeConstraints { (make) in
-            make.top.equalTo(self.imageScrollView.snp.bottom).offset(8)
-            make.centerX.equalToSuperview()
-        }
-        self.likeButton.snp.makeConstraints { make in
-            make.left.equalTo(self.nameLabel)
-            make.width.height.equalTo(20)
-            make.top.equalTo(self.imageScrollView.snp.bottom).offset(8)
-        }
+
         self.titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.likeButton.snp.bottom).offset(8)
-            make.left.equalTo(self.likeButton)
+            make.top.equalTo(self.imageCover.snp.bottom).offset(8)
+            make.left.equalTo(8)
+            make.right.equalTo(-8)
         }
-        self.dotLabel.snp.makeConstraints { make in
-            make.left.equalTo(self.titleLabel.snp.right).offset(3)
-            make.centerY.equalTo(self.titleLabel)
-        }
+
         self.describeLabel.snp.makeConstraints { make in
-            make.left.equalTo(self.dotLabel.snp.right).offset(3)
-            make.centerY.equalTo(self.titleLabel)
+            make.left.equalTo(self.titleLabel)
+            make.right.equalTo(-8)
+            make.top.equalTo(self.titleLabel.snp.bottom).offset(5)
             make.bottom.equalTo(-10)
         }
     }
 
     // MARK: - 私有属性
-    private lazy var nameLabel: UILabel = {
-        let temp = UILabel()
-        temp.text = "Larry_ikuzo"
+    private lazy var containerView: UIView = {
+        let temp = UIView(frame: CGRect.zero)
+        temp.backgroundColor = UIColor.white
+        temp.layer.cornerRadius = 20
+        temp.layer.masksToBounds = true
+        return temp
+    }()
+    
+    private lazy var shadowView: UIView = {
+        let temp = UIView()
+        temp.layer.shadowOffset = CGSize(width: 0, height: 10)
+        temp.layer.shadowRadius = 20
+        temp.layer.shadowOpacity = 0.8
+        temp.layer.shadowColor = UIColor.lightGray.cgColor
         return temp
     }()
 
-    private lazy var imageScrollView: ImageScrollView = {
-        let temp = ImageScrollView()
-        temp.showsVerticalScrollIndicator = false
-        temp.showsHorizontalScrollIndicator = false
-        return temp
-    }()
-
-    private lazy var pageControl: UIPageControl = {
-        let temp = UIPageControl()
-        temp.numberOfPages = 3
-        return temp
-    }()
-
-    private lazy var likeButton: UIButton = {
-        let temp = UIButton()
-        temp.setBackgroundImage(UIImage(named: "like"), for: UIControlState())
+    private lazy var imageCover: UIImageView = {
+        let temp = UIImageView()
+        temp.image = UIImage(named: "IMG_5917")
         return temp
     }()
 
     private lazy var titleLabel: UILabel = {
         let temp = UILabel()
-        temp.text = "Moment"
-        return temp
-    }()
-
-    private lazy var dotLabel: UILabel = {
-        let temp = UILabel()
-        temp.text = "●"
+        temp.font = UIFont.boldSystemFont(ofSize: 14.0)
         return temp
     }()
 
     private lazy var describeLabel: UILabel = {
         let temp = UILabel()
-        temp.text = "We need to remember!"
+        temp.numberOfLines = 0
+        temp.font = UIFont.systemFont(ofSize: 12.0)
         return temp
     }()
 }
